@@ -1,0 +1,1005 @@
+/* Import Courier Prime from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Courier Prime', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-mono: 'Courier Prime', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-size: 12px; /* Updated to 12px */
+    --line-height: 1.5; /* Base line height */
+    --text-color: var(--foreground);
+    --text-muted: var(--muted-foreground);
+    --background: #FEFCFB;
+    --foreground: oklch(0.145 0 0);
+    --card: #ffffff;
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: #030213;
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.95 0.0058 264.53);
+    --secondary-foreground: #030213;
+    --muted: #ececf0;
+    --muted-foreground: #717182;
+    --accent: #e9ebef;
+    --accent-foreground: #030213;
+    --destructive: #d4183d;
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: transparent;
+    --input-background: #f3f3f5;
+    --switch-background: #cbced4;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: #030213;
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: oklch(0.637 0.237 25.331);
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: #030213;
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(0.269 0 0);
+    --sidebar-ring: oklch(0.439 0 0);
+  }
+
+  /* Responsive base typography */
+  html {
+    font-size: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: var(--background);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size); /* 12px */
+    line-height: var(--line-height);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Typography scale - based on 12px base */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h1 { font-size: 1.5rem; }   /* 18px */
+  h2 { font-size: 1.333rem; } /* 16px */
+  h3 { font-size: 1.167rem; } /* 14px */
+  h4 { font-size: 1.083rem; } /* 13px */
+  h5 { font-size: 1rem; }     /* 12px */
+  h6 { font-size: 0.833rem; } /* 10px */
+
+  p, li, span, div, button, input, select, textarea {
+    font-size: 1rem; /* 12px */
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+
+  /* Responsive container */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Responsive text utilities */
+  .text-xs { font-size: 0.75rem; }    /* 9px */
+  .text-sm { font-size: 0.875rem; }   /* 10.5px */
+  .text-base { font-size: 1rem; }     /* 12px */
+  .text-lg { font-size: 1.083rem; }   /* 13px */
+  .text-xl { font-size: 1.167rem; }   /* 14px */
+  .text-2xl { font-size: 1.333rem; }  /* 16px */
+  .text-3xl { font-size: 1.5rem; }    /* 18px */
+  .text-4xl { font-size: 1.75rem; }   /* 21px */
+
+  /* Responsive layout adjustments */
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+
+  /* Base typography */
+  html {
+    font-size: 100%; /* 16px by default */
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size); /* 12px */
+    line-height: var(--line-height);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography scale - based on 12px base */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h1 { font-size: 1.5rem; }  /* 18px */
+  h2 { font-size: 1.333rem; }   /* 16px */
+  h3 { font-size: 1.167rem; }  /* 14px */
+  h4 { font-size: 1.083rem; } /* 13px */
+  h5 { font-size: 1rem; }     /* 12px */
+  h6 { font-size: 0.833rem; } /* 10px */
+
+  p, li, span, div, button, input, select, textarea {
+    font-size: 1rem; /* 12px */
+    line-height: 1.5;
+  }
+
+  /* Text size utilities - based on 12px base */
+  .text-xs { font-size: 0.75rem; }    /* 9px */
+  .text-sm { font-size: 0.875rem; }   /* 10.5px */
+  .text-base { font-size: 1rem; }     /* 12px */
+  .text-lg { font-size: 1.083rem; }   /* 13px */
+  .text-xl { font-size: 1.167rem; }    /* 14px */
+  .text-2xl { font-size: 1.333rem; }    /* 16px */
+  .text-3xl { font-size: 1.5rem; }   /* 18px */
+  .text-4xl { font-size: 1.75rem; }      /* 21px */
+
+  /* Update form elements to use 12px */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  select,
+  textarea {
+    font-size: 1rem; /* 12px */
+    line-height: 1.5;
+  }
+
+  /* Text alignment utilities */
+  .text-left { text-align: left; }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .text-justify { text-align: justify; }
+
+  /* Line height utilities */
+  .leading-none { line-height: 1; }
+  .leading-tight { line-height: 1.25; }
+  .leading-snug { line-height: 1.375; }
+  .leading-normal { line-height: 1.5; }
+  .leading-relaxed { line-height: 1.625; }
+  .leading-loose { line-height: 2; }
+
+  /* Text color utilities */
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  * {
+    @apply border-border;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 2em;
+  }
+
+  .read-the-docs {
+    color: #888;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background: transparent;
+    height: auto !important;
+    min-height: 100%;
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .swiper-slide-active {
+    z-index: 1;
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .swiper-slide-next {
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .lazy-load-image-background {
+    width: 100%;
+  }
+
+  /* Typography */
+  h1 {
+    @apply text-2xl font-medium leading-normal;
+  }
+
+  h2 {
+    @apply text-xl font-medium leading-normal;
+  }
+
+  h3 {
+    @apply text-lg font-medium leading-normal;
+  }
+
+  h4, label, button {
+    @apply text-base font-medium leading-normal;
+  }
+
+  p, input {
+    @apply text-base font-normal leading-normal;
+  }
+
+  /* Ensure all text inherits the base size */
+  body, p, span, div, a, button, input, textarea, select, label {
+    font-size: inherit;
+  }
+
+  /* Keep large headings at 1.5rem (24px) */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  /* Adjust specific heading sizes if needed */
+  h1 { font-size: 1.5rem; } /* 24px */
+  h2 { font-size: 1.3rem; } /* ~21px */
+  h3 { font-size: 1.1rem; } /* ~18px */
+
+  /* Adjust line heights for better readability */
+  p, li, span, div {
+    line-height: 1.5;
+  }
+
+  /* Small text for less important information */
+  .small-text {
+    font-size: 0.85rem; /* ~11px */
+    opacity: 0.8;
+  }
+
+  /* Adjust form elements to match the new base size */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  select,
+  textarea {
+    font-size: 0.5rem; /* 12px */
+    line-height: 1.5;
+  }
+
+  /* Adjust button text */
+  button,
+  .button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    font-size: 1rem; /* 12px */
+    line-height: 1.5;
+  }
+}
+
+/* Bio Section */
+.bio-section {
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  max-width: 600px;
+  text-align: left;
+  font-size: 0.833rem; /* 10px (12px * 0.833) */
+  line-height: 1.5;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-top: 0.1rem;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 0.5rem 0;  
+  padding: 0.15rem 0;     
+  line-height: 1.2;       
+  font-size: 0.833rem;
+  min-height: 1.2em;      
+  height: auto;           
+}
+
+.experience-details {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0;
+  flex-wrap: nowrap;
+  gap: 0.5rem;            
+  margin: 0;
+  padding: 0;
+  line-height: inherit;   
+}
+
+.experience-year, .experience-role, .experience-company {
+  margin: 0;
+  padding: 0;
+  line-height: 1;  
+}
+
+.experience-year {
+  min-width: 80px;  
+  opacity: 0.8;
+  margin-right: 1rem;
+  flex-shrink: 0;  
+}
+
+.experience-details {
+  display: flex;
+  align-items: baseline;  
+  flex-grow: 1;
+  min-width: 0;  
+  flex-wrap: wrap;  
+  gap: 0.5rem;  
+}
+
+.experience-role {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--muted-foreground);
+  margin-right: 0.5rem;  
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.experience-company {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  color: var(--foreground);  
+}
+
+.company-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
+.company-link-icon {
+  margin-left: 0.15rem;  
+  width: 0.7em;  
+  height: 0.7em;  
+  opacity: 0.7;  
+}
+
+/* App Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.main-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 612px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  
+}
+
+/* Chat Section */
+.chat-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0 2rem 2rem;
+  max-width: 612px;
+  width: 100%;
+  margin: 0 auto;
+  color: var(--foreground);
+}
+
+.profile-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 62px;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+.profile-title {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--muted-foreground);
+}
+
+/* Chat Interface */
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--foreground);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background-color: var(--muted);
+  color: var(--foreground);
+  font-size: 1rem;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.message-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.message-prefix {
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+
+.chat-message.user .message-prefix {
+  color: var(--accent-foreground);
+}
+
+.chat-form {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  background-color: var(--background);
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--input-background);
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.send-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.send-button:hover {
+  opacity: 0.9;
+}
+
+.send-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  opacity: 0.9;
+}
+
+.dark-mode-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  background-color: var(--background);
+  margin-top: auto;
+}
+
+/* ChatBox Styles */
+.chatbox-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+.chatbox-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Stack messages from bottom */
+  min-height: 0;
+  gap: 0.5rem;
+}
+
+.chatbox-message {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.25rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: messageAppear 0.3s ease-out forwards;
+}
+
+@keyframes messageAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chatbox-message-user {
+  text-align: right;
+  color: var(--primary);
+}
+
+.chatbox-typing-indicator {
+  line-height: 1.5;
+  opacity: 0.7;
+  margin: 0.25rem 0;
+  font-style: italic;
+}
+
+.chatbox-input-container {
+  padding: 1rem;
+  background: var(--background);
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  border-top: 1px solid var(--border);
+}
+
+.chatbox-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chatbox-input-prefix {
+  opacity: 0.7;
+}
+
+.chatbox-input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+/* Animation for typing indicator */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+.chatbox-output::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chatbox-output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chatbox-output::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 2px;
+}
+
+/* Dark mode adjustments */
+.dark .chatbox-input {
+  color: var(--foreground);
+}
+
+.dark .chatbox-input::placeholder {
+  color: var(--muted-foreground);
+}
+
+/* Ensure all text elements use the correct color */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  color: inherit;
+}
+
+/* Experience Section Styles */
+.company-link {
+  position: relative;
+  text-decoration: none;
+  padding-right: 16px;
+  transition: all 0.2s ease;
+}
+
+.company-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.2s ease;
+}
+
+.company-link:hover::after {
+  width: 100%;
+}
+
+.company-arrow {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.company-link:hover .company-arrow {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+/* Base responsive styles */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+
+body {
+  @apply text-foreground bg-background antialiased;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Container responsive behavior */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-medium tracking-tight;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 { @apply text-3xl md:text-4xl lg:text-5xl; }
+h2 { @apply text-2xl md:text-3xl lg:text-4xl; }
+h3 { @apply text-xl md:text-2xl lg:text-3xl; }
+h4 { @apply text-lg md:text-xl lg:text-2xl; }
+h5 { @apply text-base md:text-lg lg:text-xl; }
+h6 { @apply text-sm md:text-base lg:text-lg; }
+
+/* Responsive images */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive tables */
+table {
+  @apply w-full border-collapse;
+}
+
+/* Responsive iframe */
+iframe {
+  max-width: 100%;
+}
+
+/* Chat specific responsive adjustments */
+@media (max-width: 767px) {
+  .chatbox-container {
+    @apply rounded-none border-l-0 border-r-0 border-t-0;
+    height: 100%;
+  }
+  
+  .chatbox-output {
+    @apply p-3;
+  }
+  
+  .chatbox-message {
+    @apply max-w-[90%];
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    @apply bg-white text-black;
+    font-size: 12pt;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Dark mode transitions */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background rounded;
+}
+
+/* Remove default button styles */
+button {
+  @apply appearance-none bg-transparent border-0 p-0 m-0 cursor-pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Responsive utility classes */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Responsive grid for the main layout */
+.main-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+/* Responsive spacing utilities */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* Responsive container for content */
+.content-container {
+  @apply mx-auto px-4 w-full max-w-7xl;
+}
