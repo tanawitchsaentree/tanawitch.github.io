@@ -27,18 +27,18 @@ export default function App() {
     <div className="app">
       <DarkModeToggle />
       
-      <main className="main-content">
-        {/* Left Column - Chat Interface */}
-        <section className="chat-section">
-          <div className="chat-container">
-            <ChatBox />
-          </div>
-        </section>
-        
-        {/* Right Column - Profile Content */}
-        <section className="profile-section">
+      <main className="main-content flex flex-col lg:flex-row gap-8">
+        {/* Profile Content comes first on small screens */}
+        <section className="profile-section order-1 lg:order-none w-full lg:w-1/2">
           <div className="profile-container">
             <Index />
+          </div>
+        </section>
+
+        {/* Chat Interface appears below on small, side by side on large */}
+        <section className="chat-section order-2 lg:order-none w-full lg:w-1/2">
+          <div className="chat-container">
+            <ChatBox />
           </div>
         </section>
       </main>

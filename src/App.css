@@ -263,6 +263,23 @@ body {
   }
 }
 
+/* Responsive Flex Override for main-content */
+@media (max-width: 1023px) {
+  .main-content {
+    display: flex !important; /* override earlier grid */
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem;
+  }
+}
+
 /* Footer at the bottom */
 .footer {
   width: 100%;
@@ -361,11 +378,24 @@ h1 {
 
 /* Dark mode toggle positioning */
 .dark-mode-toggle {
+  all: unset; /* reset all inherited/button styles */
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 16px;
+  left: 16px;
   z-index: 1000;
-  margin-top: 0.5rem;  /* Added top margin */
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dark-mode-toggle:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
 }
 
 /* Media query for mobile devices */
