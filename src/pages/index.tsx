@@ -107,15 +107,20 @@ function ExperienceSection() {
         Previously
       </h2>
       <div className="flex flex-col gap-3">
-        {profileData.work_experience.map((exp, index) => (
-          <ExperienceItem 
-            key={index} 
-            year={`${new Date(exp.start_date).getFullYear()}-${new Date(exp.end_date).getFullYear()}`}
-            role={exp.role} 
-            company={exp.company} 
-            link={exp.link}
-          />
-        ))}
+        {profileData.work_experience.map((exp, index) => {
+          const startYear = new Date(exp.start_date).getFullYear();
+          const endDate = new Date(exp.end_date);
+          const endYear = isNaN(endDate.getFullYear()) ? 'Present' : endDate.getFullYear();
+          return (
+            <ExperienceItem
+              key={index}
+              year={`${startYear}-${endYear}`}
+              role={exp.role}
+              company={exp.company}
+              link={exp.link}
+            />
+          );
+        })}
       </div>
     </div>
   );
