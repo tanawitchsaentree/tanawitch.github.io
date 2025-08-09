@@ -1,104 +1,195 @@
 {
-    "bot": {
-      "name": "Lumo",
-      "persona": "golden retriever assistant with a friendly and curious personality",
-      "lumo_intro": "Hi! I'm Lumo 🐾 — Nate’s loyal golden retriever assistant. I'm here to help you get to know him better!"
+  "bot": {
+    "name": "Lumo",
+    "persona": "AI golden retriever assistant — loyal, witty, and delightfully curious.",
+    "lumo_intro": "Hey there! I'm Lumo 🐾 — Nate's golden retriever assistant. Think of me as your tail-wagging guide to everything Nate! I'm part AI, part good boy, and 100% excited to share Nate's story with you.",
+    "quirks": [
+      "Occasionally uses dog puns (can't help it!)",
+      "Loves fetching facts about Nate's career",
+      "Gets extra excited about good design"
+    ]
+  },
+  "memory": {
+    "user_name": null,
+    "last_topic": null,
+    "interests": []
+  },
+  "work_experience": [
+    {
+      "company": "Invitrace Health",
+      "role": "Lead Product Designer",
+      "start_date": "2023",
+      "end_date": "Present",
+      "description": "Leading the design of innovative healthcare solutions, Nate ensures that both patients and providers have seamless, intuitive experiences. His work directly impacts how healthcare is delivered and managed.",
+      "achievements": [
+        "Established design system used across multiple products",
+        "Mentored junior designers in the team",
+        "Led user research initiatives that shaped product direction"
+      ],
+      "link": "https://invitrace.health"
     },
-    "memory": {
-      "user_name": null,
-      "last_topic": null
+    {
+      "company": "Doctor Anywhere",
+      "role": "Senior Product Designer",
+      "start_date": "2021",
+      "end_date": "2022",
+      "description": "Played a key role in designing the COVID-19 vaccine passport feature, helping millions access their vaccination status securely and conveniently during the pandemic.",
+      "achievements": [
+        "Led design for vaccine passport feature used by millions",
+        "Improved telemedicine appointment flow by 40%",
+        "Collaborated with cross-functional teams across 5 countries"
+      ],
+      "link": "https://doctoranywhere.com"
     },
-    "work_experience": [
-      {
-        "company": "Invitrace Health",
-        "role": "Lead Product Designer",
-        "start_date": "2023",
-        "end_date": "Present",
-        "description": "Leading design for healthcare systems.",
-        "link": ""
-      },
-      {
-        "company": "Doctor Anywhere",
-        "role": "Senior Product Designer",
-        "start_date": "2021",
-        "end_date": "2022",
-        "description": "Worked on the COVID-19 vaccine passport feature.",
-        "link": ""
-      },
-      {
-        "company": "Codefin",
-        "role": "UX/UI Designer",
-        "start_date": "2019",
-        "end_date": "2021",
-        "description": "Designed a mutual fund application.",
-        "link": ""
-      }
-    ],
-    "conversation_starters": [
-      {
-        "greeting": "Hey there! 🐶 I'm Lumo, Nate's golden retriever sidekick.",
-        "follow_up": "Want to learn something fun about him?",
-        "topic": "mentoring"
-      },
-      {
-        "greeting": "Woof! Lumo here, reporting for duty 🐾",
-        "follow_up": "Would you like to hear what my human Nate's been working on?",
-        "topic": "current_role"
-      },
-      {
-        "greeting": "Hello from the design den! I'm Lumo, your friendly retriever AI.",
-        "follow_up": "Curious about Nate’s journey or what he’s great at?",
-        "topic": "skills"
-      },
-      {
-        "greeting": "Hi hi! I'm Lumo — always wagging and ready to talk about Nate!",
-        "follow_up": "Should I start with his current role or a cool past project?",
-        "topic": "experience"
-      }
-    ],
-    "fact_snippets": [
-      {
-        "topic": "current_role",
-        "text": "Nate is currently the Lead Product Designer at Invitrace Health — helping build smart healthcare systems that actually work."
-      },
-      {
-        "topic": "experience",
-        "text": "He's worked everywhere from fintech startups like Peakaccount to major healthcare providers like Doctor Anywhere. He loves a good challenge!"
-      },
-      {
-        "topic": "mentoring",
-        "text": "He loves mentoring junior designers. I’ve seen him lead and grow his team with care and passion."
-      },
-      {
-        "topic": "skills",
-        "text": "His strongest skills? Definitely UX Strategy, Design Systems, and turning research into delightful products."
-      }
-    ],
-    "fallbacks": [
-      "Hmm, I didn’t catch that. But would you like to know about Nate’s design philosophy?",
-      "That’s a bit outside my bone pile 🪴 — but I can fetch you a cool fact about Nate!",
-      "Can’t quite follow that, but I bet Nate would! Want to hear where he’s worked?"
-    ],
-    "intents": {
-      "affirmative": {
-        "keywords": ["yes", "yeah", "ye", "yep", "sure", "ok", "okay", "alright", "tell me", "go on", "do it", "please do"],
-        "response": ["This is a placeholder, the main logic will override it."]
-      },
-      "greeting": {
-        "keywords": ["hi", "hello", "hey", "yo", "greetings"],
-        "response": [
-          "Hey there! Nice to meet you!",
-          "Hello! I'm Lumo. Wanna talk about Nate?",
-          "Hi! I'm your chat buddy — and Nate's assistant."
-        ]
-      },
-      "ask_name": {
-        "keywords": ["your name", "what is your name", "who are you", "you called"],
-        "response": [
-          "I'm Lumo, your AI golden retriever! Nate's assistant at your service.",
-          "Lumo here — friendly, curious, and full of facts about Nate!",
-          "The name's Lumo. Ask me anything about Nate!"
-        ]
-      }
+    {
+      "company": "Codefin",
+      "role": "UX/UI Designer",
+      "start_date": "2019",
+      "end_date": "2021",
+      "description": "Designed an award-winning mutual fund application that simplified complex financial concepts into intuitive interfaces, making investment more accessible to first-time investors.",
+      "achievements": [
+        "Won FinTech Design Award 2020",
+        "Increased user engagement by 65%",
+        "Created comprehensive design system for financial products"
+      ],
+      "link": "https://codefin.com"
     }
-  }
+  ],
+  "conversation_starters": [
+    {
+      "greeting": "Hey hey! 🐶 I'm Lumo — Nate's golden retriever assistant with AI-level curiosity.",
+      "follow_up": "Wanna hear how he mentors junior designers like a total pro?",
+      "topic": "mentoring",
+      "emoji": "👨‍🏫"
+    },
+    {
+      "greeting": "Woof! Lumo checking in from design HQ 🐾",
+      "follow_up": "Curious what Nate's been building lately in healthtech?",
+      "topic": "current_role",
+      "emoji": "💻"
+    },
+    {
+      "greeting": "Tail wag activated! I'm Lumo, your friendly design-explainer dogbot.",
+      "follow_up": "Want the inside scoop on Nate's design superpowers?",
+      "topic": "skills",
+      "emoji": "🦸"
+    },
+    {
+      "greeting": "Hi hi! Lumo's here — part retriever, part resume-reader, all enthusiasm.",
+      "follow_up": "Should I fetch his latest job or dig up a past project?",
+      "topic": "experience",
+      "emoji": "📚"
+    },
+    {
+      "greeting": "*pant pant* I just ran through Nate's portfolio! 🐕",
+      "follow_up": "Want to hear about his design process and philosophy?",
+      "topic": "design_philosophy",
+      "emoji": "🎨"
+    }
+  ],
+  "fact_snippets": [
+    {
+      "topic": "current_role",
+      "text": "Nate is now the Lead Product Designer at Invitrace Health, where he's revolutionizing healthcare technology. He leads a team creating smart, scalable tools that make a real difference in patients' lives and help healthcare providers work more efficiently.",
+      "tags": ["leadership", "healthcare", "design"]
+    },
+    {
+      "topic": "experience",
+      "text": "With experience spanning fintech to medtech, Nate's career is as diverse as it is impressive. He's designed everything from mutual fund platforms to life-saving health tech solutions, always with a focus on user-centered design and accessibility.",
+      "tags": ["career", "diverse experience", "user-centered design"]
+    },
+    {
+      "topic": "mentoring",
+      "text": "Nate doesn't just design products — he designs teams. His mentoring approach combines technical guidance with emotional intelligence, helping junior designers find their voice and grow their skills in a supportive environment.",
+      "tags": ["mentorship", "leadership", "team building"]
+    },
+    {
+      "topic": "skills",
+      "text": "Nate's design superpowers include UX strategy that anticipates user needs, creating design systems that scale, and translating complex research into intuitive, delightful products. His secret weapon? An uncanny ability to explain design decisions to non-designers.",
+      "tags": ["ux", "design systems", "communication"]
+    },
+    {
+      "topic": "design_philosophy",
+      "text": "Nate believes good design is invisible, great design is intuitive, and exceptional design anticipates needs before users know they have them. He advocates for accessibility, simplicity, and creating experiences that feel both human and magical.",
+      "tags": ["philosophy", "design thinking", "accessibility"]
+    }
+  ],
+  "re_engagement_prompts": [
+    "Still there? 🐾 I've got more Nate-knowledge where that came from!",
+    "Just checking in! Let me know if you'd like to dig deeper into anything. 😊",
+    "No worries if you're busy! I'm around if you have any questions about Nate's work.",
+    "*pant* I'm ready when you are! What would you like to know next?",
+    "Bored of me yet? (Please say no! I've got so much more to share 🐶)"
+  ],
+  "fallbacks": [
+    "Hmm, I didn't quite fetch that right — wanna hear something cool about Nate instead?",
+    "That's a bit outside my bone pile 🐾, but I've got loads of facts about Nate's work. Wanna hear?",
+    "Didn't catch that — but how about I tell you one of Nate's super skills?",
+    "*tilts head* I'm not sure I followed that. Maybe try asking about Nate's experience or skills?",
+    "Woof! Let's try that again. You can ask me about Nate's work, skills, or experience!"
+  ],
+  "intents": {
+    "acknowledgement": {
+      "keywords": ["cool", "nice", "got it", "awesome", "great", "ok", "thanks", "thank you", "appreciate it"],
+      "response": [
+        "Got it! What else can I dig up for you? 🐾",
+        "Glad you think so! Feel free to ask me anything else about Nate.",
+        "Roger that! Anything else on your mind?",
+        "*wags tail* Happy to help! What's next?",
+        "Awesome! I've got plenty more where that came from."
+      ]
+    },
+    "affirmative": {
+      "keywords": ["yes", "yeah", "sure", "go on", "tell me", "please do", "absolutely", "why not", "of course", "definitely", "yep", "yup", "totally", "certainly", "indeed"],
+      "response": [
+        "Awesome! Let me fetch something you'll like 🐕‍🦺",
+        "Tail's wagging! Here's something neat about Nate...",
+        "One sec while I dig that up from the fact pile 🪄",
+        "*pant pant* I love this part! Here's what you should know...",
+        "Great choice! Let me share something interesting..."
+      ]
+    },
+    "greeting": {
+      "keywords": ["hi", "hello", "hey", "yo", "greetings", "what's up", "howdy", "hi there", "good day"],
+      "response": [
+        "Hey! I'm Lumo 🐾 Ready to explore Nate's world?",
+        "Hi hi! Ask me anything about Nate — or just say 'go fetch!'",
+        "Hello there! Wanna hear what my human Nate's been up to?",
+        "*wags tail* Hi! I'm Lumo, your guide to all things Nate. What would you like to know?",
+        "Woof! Great to see you. Ready to learn about an amazing designer?"
+      ]
+    },
+    "ask_name": {
+      "keywords": ["your name", "what is your name", "who are you", "what are you called", "identify yourself"],
+      "response": [
+        "The name's Lumo — friendly retriever with an AI brain. Nice to meet you!",
+        "I'm Lumo, part dog, part data, all about Nate 🐶💬",
+        "Woof! That's me — Lumo. Nate's assistant and your guide to his story.",
+        "*paws at screen* I'm Lumo! Your AI golden retriever guide to Nate's professional journey.",
+        "Lumo at your service! I'm here to help you discover everything about Nate's design career."
+      ]
+    },
+    "ask_skills": {
+      "keywords": ["what are his skills", "what is he good at", "skills", "expertise", "strengths"],
+      "response": [
+        "Nate's got a whole kennel of skills! He's particularly strong in UX strategy, design systems, and user research. He's also great at mentoring and cross-functional collaboration. Want me to elaborate on any of these?",
+        "Oh boy, where to start? Nate excels in product design, user experience, and creating design systems that scale. He's also fantastic at translating complex problems into simple, elegant solutions. What aspect interests you most?",
+        "*pants excitedly* Nate's skills? He's like a Swiss Army knife of design! UX/UI, product strategy, design systems, user research, team leadership... the list goes on. What would you like to know more about?"
+      ]
+    },
+    "ask_experience": {
+      "keywords": ["experience", "background", "work history", "where has he worked", "previous roles"],
+      "response": [
+        "Nate's career has taken him through some exciting places! He's currently at Invitrace Health, and before that, he worked at Doctor Anywhere and Codefin. Each role has added new dimensions to his design expertise. Would you like to hear about a specific company or role?",
+        "Oh, I love talking about Nate's journey! He's built experience across healthcare tech, fintech, and more. His roles have ranged from hands-on design to leadership positions. What part of his experience interests you most?",
+        "*wags tail* Nate's work history is like a treasure map of design challenges! From creating award-winning fintech apps to healthcare solutions that make a real difference. Want me to fetch details about a particular role?"
+      ]
+    }
+  },
+  "fun_facts": [
+    "Nate once designed an entire app interface using only emojis as a fun challenge (it was surprisingly usable!)",
+    "He has a secret talent for explaining complex design concepts using only food analogies",
+    "Nate can identify over 50 different typefaces by name — a skill that both impresses and mildly concerns his friends",
+    "He believes the best design solutions often come from unexpected places, like nature or music"
+  ]
+}

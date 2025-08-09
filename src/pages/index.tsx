@@ -1,5 +1,8 @@
 import React from 'react';
-import { Linkedin, BookOpenText, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import LinkedinIcon from '../assets/Linkedin.svg';
+import MediumIcon from '../assets/Medium.svg';
+import BehanceIcon from '../assets/Behance.svg';
 import nateProfile from '../image/nateprofile.png';
 import profileData from '../../profile_data.json';
 
@@ -110,7 +113,7 @@ function ExperienceSection() {
         {profileData.work_experience.map((exp, index) => (
           <ExperienceItem 
             key={index} 
-            year={`${new Date(exp.start_date).getFullYear()}-${new Date(exp.end_date).getFullYear()}`}
+            year={`${new Date(exp.start_date).getFullYear()} - ${/current|present/i.test(exp.end_date) ? 'Present' : new Date(exp.end_date).getFullYear()}`}
             role={exp.role} 
             company={exp.company} 
             link={exp.link}
@@ -136,9 +139,14 @@ function SocialIcon({ href, children }: { href: string; children: React.ReactNod
         color: 'var(--foreground)',
         transition: 'opacity 0.2s ease',
       }}
+      className="social-icon"
       onMouseOver={(e) => (e.currentTarget.style.opacity = '0.7')}
       onMouseOut={(e) => (e.currentTarget.style.opacity = '1')}
-      aria-label={href.includes('linkedin') ? 'LinkedIn' : 'Medium'}
+      aria-label={
+        href.includes('linkedin') ? 'LinkedIn' : 
+        href.includes('medium') ? 'Medium' :
+        href.includes('behance') ? 'Behance' : 'Social Link'
+      }
     >
       {children}
     </a>
@@ -153,11 +161,15 @@ function SocialLinks() {
       marginTop: '1rem',
     }}>
       <SocialIcon href="https://www.linkedin.com/in/tanawitch-saentree/">
-        <Linkedin style={{ width: '20px', height: '20px', color: 'inherit' }} />
+        <img src={LinkedinIcon} alt="LinkedIn" style={{ width: '20px', height: '20px' }} />
       </SocialIcon>
       
       <SocialIcon href="https://medium.com/@thenutlpkl">
-        <BookOpenText style={{ width: '20px', height: '20px', color: 'inherit' }} />
+        <img src={MediumIcon} alt="Medium" style={{ width: '20px', height: '20px' }} />
+      </SocialIcon>
+      
+      <SocialIcon href="https://www.behance.net/tanawitchsaentree">
+        <img src={BehanceIcon} alt="Behance" style={{ width: '20px', height: '20px' }} />
       </SocialIcon>
     </div>
   );
