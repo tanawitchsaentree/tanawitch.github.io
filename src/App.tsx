@@ -1,22 +1,25 @@
 import { useTheme } from 'next-themes';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Sunset } from 'lucide-react';
 import Index from "./pages/index";
 import ChatBox from "./components/ChatBox";
 import './index.css';
 
 function DarkModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const nextTheme = resolvedTheme === 'light' ? 'dark' : resolvedTheme === 'dark' ? 'twilight' : 'light';
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(nextTheme)}
       className="dark-mode-toggle"
-      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={`Switch to ${nextTheme} mode`}
     >
-      {theme === 'dark' ? (
-        <Sun className="w-5 h-5" />
-      ) : (
+      {nextTheme === 'dark' ? (
         <Moon className="w-5 h-5" />
+      ) : nextTheme === 'twilight' ? (
+        <Sunset className="w-5 h-5" />
+      ) : (
+        <Sun className="w-5 h-5" />
       )}
     </button>
   );
