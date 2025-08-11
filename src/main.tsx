@@ -18,7 +18,7 @@ const root = document.getElementById('root');
 if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem themes={["light", "dark", "twilight"]}>
         <App />
       </ThemeProvider>
     </React.StrictMode>,

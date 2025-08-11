@@ -61,6 +61,30 @@
     --ring: oklch(0.439 0 0);
   }
 
+  .twilight {
+    --background: #FFE8D6;
+    --foreground: #362B24;
+    --card: #FFE8D6;
+    --card-foreground: #362B24;
+    --popover: #FFE8D6;
+    --popover-foreground: #362B24;
+    --primary: #FF8C42;
+    --primary-foreground: #ffffff;
+    --secondary: #FAD4A7;
+    --secondary-foreground: #362B24;
+    --muted: #FAD4A7;
+    --muted-foreground: #665B55;
+    --accent: #FAD4A7;
+    --accent-foreground: #362B24;
+    --destructive: #d4183d;
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: transparent;
+    --input-background: #f3f3f5;
+    --switch-background: #FAD4A7;
+    --ring: #FFB77E;
+  }
+
   html {
     font-size: 100%;
     height: 100%;

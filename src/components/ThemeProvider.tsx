@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // src/components/ThemeProvider.tsx
 'use client'; // <-- บอก Next.js ว่านี่คือ Client Component
 
